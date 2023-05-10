@@ -349,7 +349,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Camara/ControladorCamara.cs"
 "Assets/Scripts/Camara/TriggerCamara.cs"
-"Assets/Scripts/Movmientojugador.cs"
+"Assets/Scripts/Espada/DestruirEspada.cs"
+"Assets/Scripts/Jugador/GolpeoEspada.cs"
+"Assets/Scripts/Jugador/Movmientojugador.cs"
 -langversion:9.0
 
 /deterministic
