@@ -261,11 +261,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 125397843}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93ae6c22c7f90a43956c215ee3adb85, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f00e4bf38a59b746ba083ecb887a0cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   newCamPos: {x: 0, y: 0, z: 10}
   newPlayerPos: {x: 0, y: 0, z: 1.5}
+  triggerAbajo: {fileID: 1325405857}
 --- !u!1 &173790235
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +375,6 @@ GameObject:
   m_Component:
   - component: {fileID: 459825251}
   - component: {fileID: 459825252}
-  - component: {fileID: 459825253}
   m_Layer: 0
   m_Name: Izquierda
   m_TagString: Untagged
@@ -410,20 +410,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &459825253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459825250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93ae6c22c7f90a43956c215ee3adb85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCamPos: {x: -10, y: 0, z: 0}
-  newPlayerPos: {x: 1.5, y: 0, z: 0}
 --- !u!1 &475696507
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +419,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475696508}
-  - component: {fileID: 475696509}
   m_Layer: 0
   m_Name: Derecha
   m_TagString: Untagged
@@ -456,20 +441,6 @@ Transform:
   m_Father: {fileID: 878075372}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &475696509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475696507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93ae6c22c7f90a43956c215ee3adb85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCamPos: {x: 10, y: 0, z: 0}
-  newPlayerPos: {x: 1.5, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325405854}
   - component: {fileID: 1325405856}
-  - component: {fileID: 1325405855}
+  - component: {fileID: 1325405857}
   m_Layer: 0
   m_Name: Abajo
   m_TagString: Untagged
@@ -764,20 +735,6 @@ Transform:
   m_Father: {fileID: 1237300037}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1325405855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325405853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93ae6c22c7f90a43956c215ee3adb85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newCamPos: {x: 0, y: 0, z: -10}
-  newPlayerPos: {x: 0, y: 0, z: -1.5}
 --- !u!65 &1325405856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -791,6 +748,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1325405857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325405853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93ae6c22c7f90a43956c215ee3adb85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newCamPos: {x: 0, y: 0, z: -10}
+  newPlayerPos: {x: 0, y: 0, z: -1.5}
+  triggerArriba: {fileID: 125397846}
 --- !u!1 &1421398493
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +875,7 @@ GameObject:
   - component: {fileID: 1823712554}
   - component: {fileID: 1823712559}
   - component: {fileID: 1823712560}
+  - component: {fileID: 1823712561}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Player
@@ -1033,6 +1006,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   espada: {fileID: 3555437143937347511, guid: 1ee389fa17ed958479ae0adc7972a3c4, type: 3}
+--- !u!114 &1823712561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823712553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d19d4a16d98f34f9f8d829e2007458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bomba: {fileID: 4322191141711307125, guid: 0f631dea63664df49aaebbe89205d6fa, type: 3}
 --- !u!1 &1937713900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1103,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0135cb0cb4a47b447b9f54b90fdce2ab, type: 2}
+  - {fileID: 2100000, guid: 84988da2aec6eab47acee327fc157870, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1215,7 +1201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 84988da2aec6eab47acee327fc157870, type: 2}
+  - {fileID: 2100000, guid: 0135cb0cb4a47b447b9f54b90fdce2ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

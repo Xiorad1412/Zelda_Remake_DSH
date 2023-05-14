@@ -348,9 +348,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Camara/ControladorCamara.cs"
-"Assets/Scripts/Camara/TriggerCamara.cs"
-"Assets/Scripts/Espada/DestruirEspada.cs"
+"Assets/Scripts/Camara/TriggerCamaraAbajo.cs"
+"Assets/Scripts/Camara/TriggerCamaraArriba.cs"
+"Assets/Scripts/Herramientas/DestruirEspada.cs"
 "Assets/Scripts/Jugador/GolpeoEspada.cs"
+"Assets/Scripts/Jugador/Herramientas.cs"
 "Assets/Scripts/Jugador/Movmientojugador.cs"
 -langversion:9.0
 
