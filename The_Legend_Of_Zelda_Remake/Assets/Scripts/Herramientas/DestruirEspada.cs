@@ -13,7 +13,7 @@ public class DestruirEspada : MonoBehaviour
     //Cuando pase el tiempo deseado se destruye la espada
     IEnumerator waiter() 
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.15f);
         Object.Destroy(this.gameObject);
     }
 

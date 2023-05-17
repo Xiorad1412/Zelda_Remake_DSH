@@ -17,7 +17,8 @@ public class Movmientojugador : MonoBehaviour
     }
 
     /*En funcion de los botones que pulse se mueve a una direccion u otra, se hace con varios ifs para hacer que solo se
-    pueda mover en una direccion a la vez, como en el juego */
+    pueda mover en una direccion a la vez, como en el juego.
+    El parametro rotacion sirve para girar el personaje cuando se mueva para otra direccion*/
     void Update()
     {
         //Se mueve a la izquierda
@@ -26,7 +27,7 @@ public class Movmientojugador : MonoBehaviour
             transform.Translate(-Vector3.back * velocidad * Time.deltaTime); 
             if (rotacion%360 != 90)
             {   
-                transform.localRotation = Quaternion.Euler(1,-90,1);
+                transform.localRotation = Quaternion.Euler(0,-90,0);
                 rotacion = 90;
             }
         
@@ -38,7 +39,7 @@ public class Movmientojugador : MonoBehaviour
             transform.Translate(-Vector3.back * velocidad * Time.deltaTime);   
             if (rotacion%360 != 270)
             {   
-                transform.localRotation = Quaternion.Euler(1,90,1);
+                transform.localRotation = Quaternion.Euler(0,90,0);
                 rotacion = 270;
             }
 
@@ -50,7 +51,7 @@ public class Movmientojugador : MonoBehaviour
             transform.Translate(-Vector3.back * velocidad * Time.deltaTime);
             if (rotacion%360 != 0)
             {   
-                transform.localRotation = Quaternion.Euler(1,0,1);
+                transform.localRotation = Quaternion.Euler(0,0,0);
                 rotacion = 0;
             }
         }
@@ -61,7 +62,7 @@ public class Movmientojugador : MonoBehaviour
             transform.Translate(-Vector3.back * velocidad * Time.deltaTime);  
             if (rotacion%360 != 180)
             {   
-                transform.localRotation = Quaternion.Euler(1,180,1);
+                transform.localRotation = Quaternion.Euler(0,180,0);
                 rotacion = 180;
             } 
         }  
