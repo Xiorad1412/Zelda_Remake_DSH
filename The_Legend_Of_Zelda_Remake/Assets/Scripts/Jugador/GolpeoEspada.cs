@@ -12,7 +12,7 @@ public class GolpeoEspada : MonoBehaviour
 
     Transform salida;
 
-    // Start is called before the first frame update
+    //Al inicio se toma el gameObject de donde va a surgir la espada
     void Start()
     {
         salida = gameObject.transform.GetChild(0).transform;
@@ -21,11 +21,12 @@ public class GolpeoEspada : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Cada vez que se pulsa el boton y ha pasado el tiempo deseado, se instancia una espada (Esto hace que se active "DestruirEspada")
         if (Time.time >= proximoEspadazo && Input.GetKey (KeyCode.P))
         {
             proximoEspadazo = Time.time + tiempoEspadazo;
             espadazo = Instantiate(espada, salida.position, salida.rotation);
-
+            Debug.Log("Espada");
         }
     }
     

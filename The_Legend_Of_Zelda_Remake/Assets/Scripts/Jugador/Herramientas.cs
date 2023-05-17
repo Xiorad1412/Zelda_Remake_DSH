@@ -13,22 +13,32 @@ public class Herramientas : MonoBehaviour
 
     private bool bombaexplota = false;
 
-    //Parametro que guarda el objecto bomba
+    //Parametro que guarda el prefab bomba
     public GameObject Bomba;
     //Parametro que crea la bomba
     private GameObject bombazo;
 
+
+    public GameObject Exp;
+
+    private GameObject Explosion;
+
     Transform salida;
 
-    // Start is called before the first frame update
+    Transform bomb_position;
+
+    //Se toma el gameObject del que surgira la herramienta
     void Start()
     {
         salida = gameObject.transform.GetChild(0).transform;
     }
 
-    // Update is called once per frame
+
+
+    //En funcion de la opcion pulsada se activa una herramienta u otra
     void Update()
     {
+        //Con esos botones se puede cambiar de arma
         if (Input.GetKey(KeyCode.J))
         {
             opcion = Math.Abs(--opcion % 4);
@@ -39,22 +49,25 @@ public class Herramientas : MonoBehaviour
             opcion = Math.Abs(++opcion % 4);
         }
 
-        //Parte de Bomba
+        //Herramienta bomba, si se pulsa el boton de accion y ha pasado el suficiente tiempo se realiza la accion de la bomba
         if (Time.time >= proximaAccion && Input.GetKey (KeyCode.O))
         {
             proximaAccion = Time.time + tiempoAccion;
 
+            //Si no hay ninguna bomba colocada, se coloca la bomba
             if (bombaexplota == false)
             {
                 bombazo = Instantiate(Bomba, salida.position, salida.rotation);
                 bombaexplota = true;
+                bomb_position = bombazo.transform;
             }
 
+            //Si hay una bomba colocada esta explota
             else 
             {
                 Destroy(bombazo);
                 bombaexplota = false;
-                //Falta hacer que haga daño
+                Explosion = Instantiate(Exp,bomb_position.position, bomb_position.rotation);
             }
         }
 
