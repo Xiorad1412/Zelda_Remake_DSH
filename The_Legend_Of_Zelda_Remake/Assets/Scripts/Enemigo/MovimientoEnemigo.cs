@@ -12,6 +12,9 @@ public class MovimientoEnemigo : MonoBehaviour
     Rigidbody enem_rigid;
 
 
+    private int rotacion = 0;
+
+
     private int Aleatorio;
  
     void Start()
@@ -46,6 +49,45 @@ public class MovimientoEnemigo : MonoBehaviour
         {
             latestDirectionChangeTime = Time.time;
             calcuateNewMovementVector();
+        }
+
+
+        if (movementDirection.x < 0)
+        {
+            if (rotacion%360 != 180)
+            {   
+                transform.localRotation = Quaternion.Euler(0,180,0);
+                rotacion = 180;
+            } 
+        }
+
+
+        if (movementDirection.x > 0)
+        {
+            if (rotacion%360 != 0)
+            {   
+                transform.localRotation = Quaternion.Euler(0,0,0);
+                rotacion = 0;
+            }
+        }
+
+
+        if (movementDirection.z > 0)
+        {
+            if (rotacion%360 != 90)
+            {   
+                transform.localRotation = Quaternion.Euler(0,-90,0);
+                rotacion = 90;
+            }
+        }
+
+        if (movementDirection.z < 0)
+        {
+            if (rotacion%360 != 270)
+            {   
+                transform.localRotation = Quaternion.Euler(0,90,0);
+                rotacion = 270;
+            }
         }
 
         enem_rigid.MovePosition(transform.position + (movementDirection * Time.deltaTime * characterVelocity));
