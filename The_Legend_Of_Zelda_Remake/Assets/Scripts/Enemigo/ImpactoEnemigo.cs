@@ -11,7 +11,7 @@ public class ImpactoEnemigo : MonoBehaviour
     }
 
 
-    //Cuando el enemigo se golpea y se queda sin vida este desaparece
+    //Cuando el enemigo es golpeado y se queda sin vida este desaparece
     public void estoyMuertoINSIDE()
     {
         Debug.Log("ENEMIGO-ESTOY MUERTO");

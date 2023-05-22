@@ -350,7 +350,7 @@
 "Assets/Scripts/Camara/ControladorCamara.cs"
 "Assets/Scripts/Enemigo/DisparoEnemigo.cs"
 "Assets/Scripts/Enemigo/ImpactoEnemigo.cs"
-"Assets/Scripts/Enemigo/MovimientoBala.cs"
+"Assets/Scripts/Enemigo/MovimientoDisparo.cs"
 "Assets/Scripts/Enemigo/MovimientoEnemigo.cs"
 "Assets/Scripts/Enemigo/VidaEnemigo.cs"
 "Assets/Scripts/Herramientas/DanoEspada.cs"

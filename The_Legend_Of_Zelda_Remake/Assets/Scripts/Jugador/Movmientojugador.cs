@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class Movmientojugador : MonoBehaviour
 {
+    //Esta variable guarda la velocidad del jugador.
     public float velocidad;
 
+
+    //Esta variable guardarda el Rigidbody del jugador
     private Rigidbody rb;
 
+
+    //Esta variable guarda la rotacion del jugador
     private int rotacion = 0;
 
-    // Start is called before the first frame update
+
+    //Al inicio se gurdarda el Rigidbody del jugador en rb
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+
 
     /*En funcion de los botones que pulse se mueve a una direccion u otra, se hace con varios ifs para hacer que solo se
     pueda mover en una direccion a la vez, como en el juego.

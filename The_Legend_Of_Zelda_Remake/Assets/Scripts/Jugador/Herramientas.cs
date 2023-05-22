@@ -5,27 +5,48 @@ using System;
 
 public class Herramientas : MonoBehaviour
 {
+    //Esta variable guarda el momento en el que se puede hacer la proxima acción.
     float proximaAccion = 0.0f;
+
+
+    //Esta variable guarda el tiempo entre acción y acción.
     float tiempoAccion = 0.3f;
     
+    //Esta variable guarda la herramienta seleccionada.
     private int opcion = 0;
-    private const int numHerramientas = 4;
 
+
+    //Esta herramienta guarda el numero de herramientas totales.
+    private const int numHerramientas = 1;
+
+
+    //Esta variable sirve para saber si la bomba está colocada o no (La bomba se activa al 
+    //pulsar el botón de acción una vez colocada)
     private bool bombaexplota = false;
 
-    //Parametro que guarda el prefab bomba
+
+    //Esta variable guarda el prefab bomba.
     public GameObject Bomba;
-    //Parametro que crea la bomba
+
+
+    //Esta variable instanciará las bombas.
     private GameObject bombazo;
 
 
+    //Esta variable guarada el prefab de la explosion de la bomba.
     public GameObject Exp;
 
+
+    //Esta variable instanciará las explosiones.
     private GameObject Explosion;
 
+
+    //Esta variable guarda el gameObject del que saldrán las herramientas.
     Transform salida;
 
+    //Esta variable guarda la posición de la bomba cuando se coloca.
     Transform bomb_position;
+
 
     //Se toma el gameObject del que surgira la herramienta
     void Start()
@@ -41,13 +62,14 @@ public class Herramientas : MonoBehaviour
         //Con esos botones se puede cambiar de arma
         if (Input.GetKey(KeyCode.J))
         {
-            opcion = Math.Abs(--opcion % 4);
+            opcion = Math.Abs(--opcion % numHerramientas);
         }
 
         if (Input.GetKey(KeyCode.K))
         {
-            opcion = Math.Abs(++opcion % 4);
+            opcion = Math.Abs(++opcion % numHerramientas);
         }
+
 
         //Herramienta bomba, si se pulsa el boton de accion y ha pasado el suficiente tiempo se realiza la accion de la bomba
         if (Time.time >= proximaAccion && Input.GetKey (KeyCode.O))
@@ -71,13 +93,15 @@ public class Herramientas : MonoBehaviour
             }
         }
 
+
+        /*Este bloque podría ser utilizado en caso de que se quieran añadir más herramientas
+        que solo tengan un funcionamiento (a diferencia de la bomba)*/
+
         if (Time.time >= proximaAccion && Input.GetKey (KeyCode.O))
         {
             switch (opcion)
             {
-                case 0: //proximaAccion = Time.time + tiempoAccion; 
-                        //bombazo = Instantiate(Bomba, salida.position, salida.rotation);
-                        break;
+                
             }
 
         }

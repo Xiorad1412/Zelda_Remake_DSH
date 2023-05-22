@@ -5,7 +5,7 @@ using UnityEngine;
 public class DisparoEnemigo : MonoBehaviour
 {
 
-    /*Esta variable muestra el momento en el que el enemigo podra realizar el proximo disparo
+    /*Esta variable muestra el momento en el que el enemigo podra realizar el proximo disparo.
     Se ira actualizando cada vez que dispare*/
     float proximoDisparo = 0.0f;
 
@@ -15,6 +15,7 @@ public class DisparoEnemigo : MonoBehaviour
     //Este es el gameObject que diparara
     public GameObject disparo;
 
+    //De aqui saldrá el disparo
     Transform salida;
 
     //Al inicio guarda el objecto del que va a crearse el disparo
@@ -23,7 +24,7 @@ public class DisparoEnemigo : MonoBehaviour
         salida = gameObject.transform.GetChild(0).transform;
     }
 
-    /*Este objecto es un gameObject vacio, lo que hace es que cada vez que el gameObject colisione
+    /*Este script se situa en un gameObject vacio, lo que hace es que cada vez que el gameObject colisione
     con el jugador, el enemigo crea un disparo, pero tiene que haber pasado el tiempo de proximoDisparo*/
     private void OnTriggerEnter(Collider other)
     {
