@@ -1,0 +1,10 @@
+# Made in Blockbench 4.7.2
+newmtl m_14edf5f2-f31b-f656-fcca-7d500b720bc7
+map_Kd red 
+newmtl m_ae2ec04c-9e03-7e2a-09c2-b700bc8dd5a9
+map_Kd white 
+newmtl m_cba4be8e-4b28-56f1-4025-c645f8c78b99
+map_Kd orange 
+newmtl m_743d3dbe-a36d-c68d-59dd-5c4d37bd2476
+map_Kd black 
+newmtl none

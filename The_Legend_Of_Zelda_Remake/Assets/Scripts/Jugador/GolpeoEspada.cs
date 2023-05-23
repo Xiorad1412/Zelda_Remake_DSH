@@ -27,7 +27,7 @@ public class GolpeoEspada : MonoBehaviour
     //Al inicio se toma el gameObject de donde va a surgir la espada
     void Start()
     {
-        salida = gameObject.transform.GetChild(0).transform;
+        salida = gameObject.transform.GetChild(6).transform;
     }
 
 
@@ -38,6 +38,7 @@ public class GolpeoEspada : MonoBehaviour
         
         if (Time.time >= proximoEspadazo && Input.GetKey (KeyCode.P))
         {
+            linkAnimations.changeActionToAttacking();
             proximoEspadazo = Time.time + tiempoEspadazo;
             espadazo = Instantiate(espada, salida.position, salida.rotation);
             Debug.Log("Espada");

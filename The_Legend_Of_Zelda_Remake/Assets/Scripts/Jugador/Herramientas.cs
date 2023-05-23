@@ -51,7 +51,7 @@ public class Herramientas : MonoBehaviour
     //Se toma el gameObject del que surgira la herramienta
     void Start()
     {
-        salida = gameObject.transform.GetChild(0).transform;
+        salida = gameObject.transform.GetChild(5).transform;
     }
 
 

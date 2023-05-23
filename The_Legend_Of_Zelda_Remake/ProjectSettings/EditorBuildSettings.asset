@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PantallaDeTitulo.unity
+    guid: 4f73fe3cd371da84bbbffed5b993f5d7
+  - enabled: 1
+    path: Assets/Scenes/Overworld.unity
+    guid: b99ca9417e7d5064ab0b412a3f4d0817
+  - enabled: 1
+    path: Assets/Scenes/Dungeon.unity
+    guid: 384a47ffddff4cf488814486bc020524
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 334830a1ba9c810498b40c108af09fbe
   m_configObjects: {}

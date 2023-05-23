@@ -347,6 +347,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/Animations_Scripts/creditsAnimation.cs"
+"Assets/Scripts/Animations_Scripts/enemy1Animations.cs"
+"Assets/Scripts/Animations_Scripts/linkAnimations.cs"
 "Assets/Scripts/Camara/ControladorCamara.cs"
 "Assets/Scripts/Enemigo/DisparoEnemigo.cs"
 "Assets/Scripts/Enemigo/ImpactoEnemigo.cs"
@@ -358,6 +361,9 @@
 "Assets/Scripts/Jugador/GolpeoEspada.cs"
 "Assets/Scripts/Jugador/Herramientas.cs"
 "Assets/Scripts/Jugador/Movmientojugador.cs"
+"Assets/Scripts/Menus/Creditos.cs"
+"Assets/Scripts/Menus/Mazmorra.cs"
+"Assets/Scripts/Menus/MenuPrincipal.cs"
 -langversion:9.0
 
 /deterministic

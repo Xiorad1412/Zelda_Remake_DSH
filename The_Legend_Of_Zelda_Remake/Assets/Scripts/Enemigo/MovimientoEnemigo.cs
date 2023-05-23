@@ -13,7 +13,7 @@ public class MovimientoEnemigo : MonoBehaviour
 
 
     //Esta variable guarda la velocidad del enemigo.
-    private float characterVelocity = 3f;
+    private float characterVelocity = 0f;
 
 
     //Esta variable guarda la distancia que se mueve el enemigo en cada desplazamiento.

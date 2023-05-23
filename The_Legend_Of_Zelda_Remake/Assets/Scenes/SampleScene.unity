@@ -1041,6 +1041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 7171078498166724226, guid: 7844e74082100194587e57ac94d6efee, type: 3}
+      propertyPath: hesidoTocado.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: hesidoTocadoINSIDE
+      objectReference: {fileID: 0}
     - target: {fileID: 7171078498166724238, guid: 7844e74082100194587e57ac94d6efee, type: 3}
       propertyPath: m_RootOrder
       value: 5

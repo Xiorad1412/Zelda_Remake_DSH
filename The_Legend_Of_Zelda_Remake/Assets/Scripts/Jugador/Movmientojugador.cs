@@ -8,6 +8,11 @@ public class Movmientojugador : MonoBehaviour
     public float velocidad;
 
 
+    /*Esta variables muestran la posicion en la que se encuentra el jugador y 
+    la posicion a la que se ira moviendo la camara en cada momento respectivamente*/
+    private Vector3 actualPos;
+
+
     //Esta variable guardarda el Rigidbody del jugador
     private Rigidbody rb;
 
@@ -20,6 +25,7 @@ public class Movmientojugador : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        actualPos = transform.position;
     }
 
 
@@ -28,10 +34,19 @@ public class Movmientojugador : MonoBehaviour
     El parametro rotacion sirve para girar el personaje cuando se mueva para otra direccion*/
     void Update()
     {
+
+        if (actualPos == transform.position && linkAnimations.accionActual != linkAnimations.Acciones.ATTACKING)
+        {
+            linkAnimations.changeActionToIdle();
+        }
+
+
         //Se mueve a la izquierda
         if (Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.LeftArrow)) 
         {
             transform.Translate(-Vector3.back * velocidad * Time.deltaTime); 
+            linkAnimations.changeActionToRunning();
+            actualPos = transform.position;
             if (rotacion%360 != 90)
             {   
                 transform.localRotation = Quaternion.Euler(0,-90,0);
@@ -43,7 +58,9 @@ public class Movmientojugador : MonoBehaviour
         //Se mueve a la derecha
         else if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) 
         {
-            transform.Translate(-Vector3.back * velocidad * Time.deltaTime);   
+            transform.Translate(-Vector3.back * velocidad * Time.deltaTime);  
+            linkAnimations.changeActionToRunning(); 
+            actualPos = transform.position;
             if (rotacion%360 != 270)
             {   
                 transform.localRotation = Quaternion.Euler(0,90,0);
@@ -56,6 +73,8 @@ public class Movmientojugador : MonoBehaviour
         else if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) 
         {
             transform.Translate(-Vector3.back * velocidad * Time.deltaTime);
+            linkAnimations.changeActionToRunning();
+            actualPos = transform.position;
             if (rotacion%360 != 0)
             {   
                 transform.localRotation = Quaternion.Euler(0,0,0);
@@ -66,7 +85,9 @@ public class Movmientojugador : MonoBehaviour
         //Se mueve hacia atras
         else if (Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.DownArrow)) 
         {
-            transform.Translate(-Vector3.back * velocidad * Time.deltaTime);  
+            transform.Translate(-Vector3.back * velocidad * Time.deltaTime); 
+            linkAnimations.changeActionToRunning(); 
+            actualPos = transform.position;
             if (rotacion%360 != 180)
             {   
                 transform.localRotation = Quaternion.Euler(0,180,0);

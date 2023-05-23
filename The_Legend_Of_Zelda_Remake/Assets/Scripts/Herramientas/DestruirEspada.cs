@@ -15,6 +15,7 @@ public class DestruirEspada : MonoBehaviour
     {
         yield return new WaitForSeconds(0.15f);
         Object.Destroy(this.gameObject);
+        linkAnimations.changeActionToIdle();
     }
 
 

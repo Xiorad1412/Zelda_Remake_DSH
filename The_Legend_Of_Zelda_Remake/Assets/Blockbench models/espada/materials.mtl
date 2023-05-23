@@ -1,0 +1,12 @@
+# Made in Blockbench 4.7.2
+newmtl m_40d1fbf7-f0f5-1f16-0b83-35f0022c53f6
+map_Kd azul_espada_cubremanos 
+newmtl m_b02c21ac-c353-4a23-e134-cfc91a143b45
+map_Kd gris_claro_espada_filo 
+newmtl m_934f9d8a-8e1e-0a6a-0cf4-1e19b53890c3
+map_Kd gris_oscuro_espada_filo 
+newmtl m_3118e6a4-4618-39ac-92ae-4f4432878c2f
+map_Kd dorado_espada_gema 
+newmtl m_fea96566-62a5-fa4c-b49c-9dbf8751677f
+map_Kd celeste_espada_mango 
+newmtl none
