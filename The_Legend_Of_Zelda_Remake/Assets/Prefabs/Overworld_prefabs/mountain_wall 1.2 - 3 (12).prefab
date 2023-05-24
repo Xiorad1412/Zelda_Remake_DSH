@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4286981913140551847}
   m_Layer: 0
   m_Name: mountain_wall 1.2 - 3 (12)
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

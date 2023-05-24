@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6023348907374759680}
   m_Layer: 0
   m_Name: mountainCube
-  m_TagString: Untagged
+  m_TagString: Terreno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

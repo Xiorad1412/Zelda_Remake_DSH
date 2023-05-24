@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemigo
   - Bomba
+  - Terreno
   layers:
   - Default
   - TransparentFX

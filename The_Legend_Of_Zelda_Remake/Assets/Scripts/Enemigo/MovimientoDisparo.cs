@@ -17,7 +17,7 @@ public class MovimientoDisparo : MonoBehaviour
     //Cuando el disparo colisiona con el jugador desaparece el disparo
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Terreno"))
         {
             Object.Destroy(this.gameObject);
         }
